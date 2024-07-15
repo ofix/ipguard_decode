@@ -1,0 +1,48 @@
+{
+    "name": "decode",
+    "displayName": "decode",
+    "description": "decode greatwall programming language",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "decode.greatwall",
+                "title": "长城: 解密"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "decode.greatwall",
+                    "group": "1@1",
+                    "when": "editorFocus"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.7",
+        "@types/node": "20.x",
+        "@types/vscode": "^1.54.0",
+        "@vscode/test-cli": "^0.0.9",
+        "@vscode/test-electron": "^2.4.0",
+        "eslint": "^8.57.0",
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "hidefile": "^3.0.0"
+    }
+}
